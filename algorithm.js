@@ -37,8 +37,16 @@ async function global(){
         }
         
         let difference = differences(me,others);
-        
-        console.log(difference);
+        let format = (difference,others) => {
+            let array = [];
+            let count = 0;
+            difference.forEach(score => {
+                array.push([score,others[count].client.name]);
+            });
+            return array;
+        }
+        let formatted = format(difference,others);
+        console.log(formatted);
       } catch (error) {
         console.error(error.message);
       }
