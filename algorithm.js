@@ -1,11 +1,11 @@
 async function global(){
     try {
-        const response = await fetch("https://lovely-separate-dill.glitch.me/api/client/spencer");
+        let response = await fetch("https://lovely-separate-dill.glitch.me/api/client/spencer");
         if (!response.ok) {
           throw new Error(`Response status: ${response.status}`);
         }
     
-        const json = await response.json();
+        let json = await response.json();
         let me = json;
 
         response = await fetch("https://lovely-separate-dill.glitch.me/api/requests");
@@ -18,8 +18,10 @@ async function global(){
 
         const differences = (me, others) => {
 
-            let diffSum = 0;
+            
+            let difflist = [];
             others.forEach(element => {
+                let diffsum = 0;
                 let difference = me.talkativity-element.client.talkativity;
                 diffsum += difference * difference;
                 difference = me.formality-element.client.formality;
@@ -28,14 +30,15 @@ async function global(){
                 diffsum += difference * difference;
                 difference = me.extroversion-element.client.extroversion;
                 diffsum += difference * difference;
+                difflist.push(diffsum);
             });
         
-            return diffsum;
+            return difflist;
         }
         
-        let difference = others.map(differences(me,others));
+        let difference = differences(me,others);
         
-        console.log(difference)
+        console.log(difference);
       } catch (error) {
         console.error(error.message);
       }
