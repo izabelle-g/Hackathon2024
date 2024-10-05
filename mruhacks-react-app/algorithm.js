@@ -1,4 +1,4 @@
-async function global(){
+async function global() {
     try {
         let response = await fetch("https://lovely-separate-dill.glitch.me/api/client/spencer");
         if (!response.ok) {
