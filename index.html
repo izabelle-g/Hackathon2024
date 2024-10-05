@@ -1,14 +1,45 @@
-<html>
+<html lang="en">
     <head>
-        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <link rel="stylesheet" href="/styles/index.css">
+
+        <title></title>
     </head>
 
     <body>
-        
+        <header>
+
+        </header>
+
+        <h1>Form</h1>
         <form action="" method="post">
-            
+            <p>
+                <label for="name">Name</label><br>
+                <input type="name" name="name" size="30" placeholder="Enter your name" required>
+            </p>
 
+            <p>
+                <label for="task">Task Description<br>
+                    <textarea name="taskDesc" cols="50" rows="7" placeholder="Describe the task" required></textarea>
+                </label>
+            </p>
 
+            <p>
+                <label for="criteria">Criteria</label><br>
+                <input type="text" id="criteria" name="criteria" placeholder="List the requirements for your task" size="40" required>
+            </p>
+
+            <p>
+                <label for="email">Email</label><br>
+                <input type="email" name="email" size="40" placeholder="Enter your email" pattern=".+@[A-Za-z]+\.[a-z]{2,4}$" required>
+            </p>
+
+            <input type="submit" value="Submit">
 
         </form>
 
