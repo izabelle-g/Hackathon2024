@@ -19,11 +19,17 @@ form {
 }
 
 .range-label {
+    width: 100px;
     text-align: center;
 }
 
 .range-input {
     flex: 1;
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
 }
 
 input[type="range"] {
