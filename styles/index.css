@@ -11,10 +11,17 @@ form {
     align-items: center;
 }
 
-header {
-    
+.range-container {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin: 20px;
 }
 
-h1 {
+.range-label {
     text-align: center;
+}
+
+.range-input {
+    flex: 1;
 }

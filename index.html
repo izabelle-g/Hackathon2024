@@ -13,8 +13,29 @@
 
 <body>
 
-    <h2>Ideal Partner</h2>
     <form action="" method="post">
+
+        <p>
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="name" placeholder="Enter your name" size="30" required>
+        </p>
+
+        <p>
+            <label for="task">Task Description<br>
+                <textarea name="task" id="task" placeholder="Describe your task" cols="50" rows="7" required></textarea>
+            </label>
+        </p>
+
+        <p>
+            <label for="criteria">Criteria<br>
+                <textarea name="criteria" id="criteria" placeholder="List the criteria for your task" cols="50" rows="7" required></textarea>
+            </label>
+        </p>
+
+        <p>
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" placeholder="Enter your email" size="30" required>
+        </p>
 
         <h3>Talkativity</h3>
         <div class="range-container" class="range-display" id="rangeDisplay" id="rangeDisplay">
@@ -52,9 +73,7 @@
         </div>
     </form>
 
-    <hr>
 
-    <h2>Timezone</h2>
     <form action="" method="post">
         <label for="timezone">Select your timezone: </label>
         <select id="timezone" name="timezone">
