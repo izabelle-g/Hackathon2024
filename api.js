@@ -1,11 +1,17 @@
 const express = require('express');
 const supa = require('@supabase/supabase-js');
+const path = require('path');
+const http = require('http');
+const { Server } = require('socket.io');
+
 const app = express();
 const supaUrl = 'https://dpurxnwnkjulaoflmhxw.supabase.co';
 const supaAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxoZWpoaXdzaHBteG5uZGxhb3lhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjgxNDgxMTIsImV4cCI6MjA0MzcyNDExMn0.1Yvvrl74ud4nLxbC8vLii8AeQNZnboIIV81JkzFZAO0';
 const supabase = supa.createClient(supaUrl, supaAnonKey);
 
+// Middleware to parse incoming JSON requests
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Function to calculate cosine similarity between two profiles
 function cosineSimilarity(profileA, profileB) {
@@ -56,13 +62,17 @@ app.get('/api/matches', async (req, res) => {
     }
 
     // For simplicity, use the first client to find matches (or modify to take an ID)
-    const userProfile = clientData[0].Client;
+    const userProfile = {
+        name: clientData[0].Client.name,
+        talkativity: clientData[0].Client.talkativity,
+        formality: clientData[0].Client.formality,
+        friendliness: clientData[0].Client.friendlyness,
+        extroversion: clientData[0].Client.extroversion
+    };
+
     const matches = findBestMatches(userProfile, mentorData);
     res.json(matches);
 });
-
-const http = require('http');
-const { Server } = require('socket.io');
 
 // Create HTTP server and attach Socket.io
 const server = http.createServer(app);
@@ -70,8 +80,8 @@ const io = new Server(server);
 
 // Whenever a new profile is created, broadcast the updates to clients
 app.post('/api/matches', async (req, res) => {
-    // Handle matching logic here, as shown before
-    const matches = findBestMatches(req.body, mentorData);
+    // Handle matching logic here
+    const matches = findBestMatches(req.body, mentorData); // Ensure mentorData is available
 
     // Emit to all connected clients
     io.emit('new-match', matches);
@@ -90,6 +100,6 @@ io.on('connection', (socket) => {
 });
 
 const port = process.env.PORT || 8080;
-app.listen(port, () => {
+server.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
