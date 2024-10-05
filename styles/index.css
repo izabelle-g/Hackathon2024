@@ -19,6 +19,7 @@ form {
 }
 
 .range-label {
+    width: 100px;
     text-align: center;
 }
 
