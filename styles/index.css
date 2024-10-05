@@ -11,13 +11,6 @@ form {
     align-items: center;
 }
 
-.range-container {
-    display: flex;
-    align-items: center;
-    width: 300px;
-    margin: 20px;
-}
-
 .range-label {
     text-align: center;
 }
