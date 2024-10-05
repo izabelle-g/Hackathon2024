@@ -13,10 +13,10 @@ app.get('/api/requests', async (req,res) => {
     res.send(data);
 })
 
-app.get('/api/client/:name'), async (req,res) => {
+app.get('/api/client/:name', async (req,res) => {
     const {data, error} = await supabase
-    .from('request')
-    .select(`client(name, talkativity, formality, friendliness, extroversion), time_required, additional`)
+    .from('client')
+    .select(`name, talkativity, formality, friendliness, extroversion`)
     .ilike('name', req.params.name.toLowerCase());
     res.send(data);
-}
+})
