@@ -51,6 +51,7 @@ async function global(){
         console.error(error.message);
       }
 }
+global()
 // // Function to calculate cosine similarity between two profiles
 // function cosineSimilarity(profileA, profileB) {
 //     let dotProduct = 0;
