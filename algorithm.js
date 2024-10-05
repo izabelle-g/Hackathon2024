@@ -1,50 +1,45 @@
-async function getData() {
-    const url = "https://lovely-separate-dill.glitch.me/api/client/spencer";
+async function global(){
     try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error(`Response status: ${response.status}`);
+        const response = await fetch("https://lovely-separate-dill.glitch.me/api/client/spencer");
+        if (!response.ok) {
+          throw new Error(`Response status: ${response.status}`);
+        }
+    
+        const json = await response.json();
+        let me = json;
+
+        response = await fetch("https://lovely-separate-dill.glitch.me/api/requests");
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
+      
+        json = await response.json();
+        let others = json;
+
+        const differences = (me, others) => {
+
+            let diffSum = 0;
+            others.forEach(element => {
+                let difference = me.talkativity-element.client.talkativity;
+                diffsum += difference * difference;
+                difference = me.formality-element.client.formality;
+                diffsum += difference * difference;
+                difference = me.friendliness-element.client.friendliness;
+                diffsum += difference * difference;
+                difference = me.extroversion-element.client.extroversion;
+                diffsum += difference * difference;
+            });
+        
+            return diffsum;
+        }
+        
+        let difference = others.map(differences(me,others));
+        
+        console.log(difference)
+      } catch (error) {
+        console.error(error.message);
       }
-  
-      const json = await response.json();
-      return json;
-    } catch (error) {
-      console.error(error.message);
-    }
 }
-async function getRequestData() {
-    const url = "https://lovely-separate-dill.glitch.me/api/requests";
-    try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error(`Response status: ${response.status}`);
-      }
-  
-      const json = await response.json();
-      return json;
-    } catch (error) {
-      console.error(error.message);
-    }
-}
-
-const me = getData();
-const others = getRequestData();
-const differences = (me, others) => {
-    let diffSum = 0;
-    others.forEach(element => {
-        let difference = me.talkativity-element.client.talkativity;
-        diffsum += difference * difference;
-        difference = me.formality-element.client.formality;
-        diffsum += difference * difference;
-        difference = me.friendliness-element.client.friendliness;
-        diffsum += difference * difference;
-        difference = me.extroversion-element.client.extroversion;
-        diffsum += difference * difference;
-    });
-}
-
-let difference = others.map(differences)
-
 // // Function to calculate cosine similarity between two profiles
 // function cosineSimilarity(profileA, profileB) {
 //     let dotProduct = 0;
