@@ -1,0 +1,12 @@
+:root{
+    /* Color Variables */
+    --bg-color: white;
+    --contrast-colour: #FF810A;
+    --main-colour: #0068B8;
+    --main-text-color: #0A0F47;
+
+    /* Font Variables */
+    /* TODO: Find a suitable font*/
+    --main-font: 'Noto Sans SC', 'Trebuchet MS', Tahoma, sans-serif;
+    --secondary-font: 'Noto Sans SC', 'Trebuchet MS', Tahoma, sans-serif;
+}
