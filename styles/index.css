@@ -43,5 +43,4 @@ input[type="range"] {
 .singleTask{
     display: flex;
     flex-direction: row-reverse;
-
 }
