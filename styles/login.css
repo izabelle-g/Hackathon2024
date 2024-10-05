@@ -1,0 +1,43 @@
+body {
+    background-image: url(); /* Background will be image or something else */
+    display: flex;
+}
+
+.container {
+    background-color: bisque;
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-radius: 10px;
+}
+
+input {
+    height: 25px;
+    letter-spacing: 1px;
+}
+
+#password {
+    letter-spacing: 3px;
+}
+
+a {
+    background-color: white;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    background-color: gainsboro;
+}
