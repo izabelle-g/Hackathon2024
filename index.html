@@ -1,16 +1,83 @@
 <html>
-    <head>
-        
-    </head>
 
-    <body>
-        
-        <form action="" method="post">
-            
+<head>
+    <link rel="stylesheet" href="styles.css">
 
+</head>
 
+<body>
 
-        </form>
+    <h2>Ideal Partner</h2>
+    <form action="" method="post">
 
-    </body>
+        <h3>Talkativity</h3>
+        <div class="range-container" class="range-display" id="rangeDisplay" id="rangeDisplay">
+            <label class="range-label" for="partner-talk">None</label>
+            <input type="range" id="partner-talk" name="partner-talk" required>
+            <label class="range-label" for="partner-talk">Please</label>
+        </div>
+
+        <h3>Formality</h3>
+        <div class="range-container" class="range-display" id="rangeDisplay">
+            <label for="partner-formal">Casual</label>
+            <input type="range" id="partner-formal" name="partner-formal" min="0" max="10" required>
+            <label class="range-label" for="partner-talk">Unhinged</label>
+        </div>
+
+        <h3>Friendliness</h3>
+        <div class="range-container" class="range-display" id="rangeDisplay">
+            <label for="partner-friend">No</label>
+            <input type="range" id="partner-friend" name="partner-friend" required>
+            <label class="range-label" for="partner-friend">New Friend!</label>
+        </div>
+
+        <h3>Extroversion</h3>
+        <div class="range-container" class="range-display" id="rangeDisplay">
+            <label for="partner-extro">Introvert</label>
+            <input type="range" id="partner-extro" name="partner-extro" required>
+            <label class="range-label" for="partner-extro">EXTROVERT</label>
+        </div>
+
+        <h3>Others</h3>
+        <div>
+            <label for="others"></label>
+            <textarea id="others" name="others" rows="4" cols="50" placeholder="Any notes for us?"></textarea>
+            <br><br>
+        </div>
+    </form>
+
+    <hr>
+
+    <h2>Timezone</h2>
+    <form action="" method="post">
+        <label for="timezone">Select your timezone: </label>
+        <select id="timezone" name="timezone">
+            <option value="Pacific/Midway">(UTC-11:00) Midway Island</option>
+            <option value="America/Adak">(UTC-10:00) Hawaii-Aleutian Standard Time</option>
+            <option value="America/Los_Angeles">(UTC-08:00) Pacific Standard Time</option>
+            <option value="America/Denver">(UTC-07:00) Mountain Standard Time</option>
+            <option value="America/Chicago">(UTC-06:00) Central Standard Time</option>
+            <option value="America/New_York">(UTC-05:00) Eastern Standard Time</option>
+            <option value="America/Caracas">(UTC-04:00) Venezuela Time</option>
+            <option value="America/Argentina/Buenos_Aires">(UTC-03:00) Argentina Time</option>
+            <option value="Atlantic/South_Georgia">(UTC-02:00) South Georgia and the South Sandwich Islands</option>
+            <option value="Atlantic/Azores">(UTC-01:00) Azores</option>
+            <option value="UTC">(UTC+00:00) Coordinated Universal Time</option>
+            <option value="Europe/London">(UTC+00:00) London</option>
+            <option value="Europe/Paris">(UTC+01:00) Central European Time</option>
+            <option value="Europe/Berlin">(UTC+01:00) Berlin</option>
+            <option value="Europe/Athens">(UTC+02:00) Eastern European Time</option>
+            <option value="Africa/Cairo">(UTC+02:00) Cairo</option>
+            <option value="Europe/Moscow">(UTC+03:00) Moscow</option>
+            <option value="Asia/Dubai">(UTC+04:00) Gulf Standard Time</option>
+            <option value="Asia/Kabul">(UTC+04:30) Afghanistan Time</option>
+            <option value="Asia/Tokyo">(UTC+09:00) Japan Standard Time</option>
+            <option value="Australia/Sydney">(UTC+10:00) Australian Eastern Standard Time</option>
+            <option value="Pacific/Guam">(UTC+10:00) Guam</option>
+            <option value="Pacific/Fiji">(UTC+12:00) Fiji</option>
+            <option value="Pacific/Auckland">(UTC+12:00) New Zealand Standard Time</option>
+        </select>
+    </form>
+</body>
+
 </html>
