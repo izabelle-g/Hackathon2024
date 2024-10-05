@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Matching</title>
+    <script defer src="script.js"></script> <!-- Include JS file for handling form submission -->
+</head>
+<body>
+<h1>Task Matching Form</h1>
+
+<form id="matchingForm">
+    <label for="task">Task Description:</label><br>
+    <input type="text" id="task" name="task" required><br><br>
+
+    <label for="talkativity">Talkativity (0-100):</label><br>
+    <input type="range" id="talkativity" name="talkativity" min="0" max="100" required><br><br>
+
+    <label for="formality">Formality (0-100):</label><br>
+    <input type="range" id="formality" name="formality" min="0" max="100" required><br><br>
+
+    <label for="friendliness">Friendliness (0-100):</label><br>
+    <input type="range" id="friendliness" name="friendliness" min="0" max="100" required><br><br>
+
+    <label for="extroversion">Extroversion (0-100):</label><br>
+    <input type="range" id="extroversion" name="extroversion" min="0" max="100" required><br><br>
+
+    <label for="time">Estimated Time (hours):</label><br>
+    <input type="number" id="time" name="time" required><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<div id="results"></div>
+</body>
+</html>
