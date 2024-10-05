@@ -27,6 +27,11 @@ form {
     flex: 1;
 }
 
+.schedule {
+    display: flex;
+    flex-direction: column;
+}
+
 input[type="range"] {
     width: 200px;
 }
