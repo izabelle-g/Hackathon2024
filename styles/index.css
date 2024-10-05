@@ -29,3 +29,13 @@ form {
 input[type="range"] {
     width: 200px;
 }
+#userTasks, #ownTasks{
+    display: flex;
+    flex-direction: column;
+}
+
+.singleTask{
+    display: flex;
+    flex-direction: row-reverse;
+
+}
