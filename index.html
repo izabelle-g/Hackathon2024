@@ -9,5 +9,120 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+  <link rel="stylesheet" href="/styles/index.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + React</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+
+  <section> <!-- Side bar -->
+    <p><img src="" alt="profile-pic" /></p>
+    <p><label for="user-name">Name</label></p>
+    <p><img src="" alt="user-mail" href="" width="" height=""></p>
+
+    <p>
+      <h2>Scheduled Sessions</h2>
+
+      <div id="scheduledBox">
+        03-10-2024 - time - Name of matched person
+      </div>
+    </p>
+
+    <button id="closeBar">Button to close side bar</button>
+
+  </section>
+
+  <section> <!-- Main -->
+    <form action="" method="post"> <!-- Missing action -->
+
+      <p>
+        <label for="name">Name</label><br>
+        <input type="text" name="name" id="name" placeholder="Enter your name" size="30" required>
+      </p>
+
+      <p>
+        <label for="task">Task Description<br>
+          <textarea name="task" id="task" placeholder="Describe your task" cols="50" rows="7" required></textarea>
+        </label>
+      </p>
+
+      <p>
+        <label for="criteria">Criteria<br>
+          <textarea name="criteria" id="criteria" placeholder="List the criteria for your task" cols="50" rows="7"
+            required></textarea>
+        </label>
+      </p>
+
+      <p>
+        <label for="lang">Language<br>
+          <textarea name="lang" id="lang" placeholder="State your language" cols="30" rows="2" required></textarea>
+        </label>
+      </p>
+
+      <p>
+        <label for="email">Email</label><br>
+        <input type="email" name="email" id="email" placeholder="Enter your email" size="30" required>
+      </p>
+
+      <h3>Talkativity</h3>
+      <div class="range-container" class="range-display" id="rangeDisplay">
+        <label class="range-label" for="partner-talk">None</label>
+        <input type="range" id="partner-talk" name="partner-talk" min="0" max="10" required>
+        <label class="range-label" for="partner-talk">Please</label>
+      </div>
+
+      <h3>Formality</h3>
+      <div class="range-container" class="range-display" id="rangeDisplay">
+        <label class="range-label" for="partner-formal">Casual</label>
+        <input type="range" id="partner-formal" name="partner-formal" min="0" max="10" required>
+        <label class="range-label" for="partner-talk">Unhinged</label>
+      </div>
+
+      <h3>Friendliness</h3>
+      <div class="range-container" class="range-display" id="rangeDisplay">
+        <label class="range-label" for="partner-friend">No</label>
+        <input type="range" id="partner-friend" name="partner-friend" min="0" max="10" required>
+        <label class="range-label" for="partner-friend">New Friend!</label>
+      </div>
+
+      <h3>Extroversion</h3>
+      <div class="range-container" class="range-display" id="rangeDisplay">
+        <label class="range-label" for="partner-extro">Introvert</label>
+        <input type="range" id="partner-extro" name="partner-extro" min="0" max="10" required>
+        <label class="range-label" for="partner-extro">EXTROVERT</label>
+      </div>
+
+      <h3>Others</h3>
+      <div>
+        <label for="others"></label>
+        <textarea id="others" name="others" rows="4" cols="50" placeholder="Any notes for us?"></textarea>
+        <br><br>
+      </div>
+
+      <div class="schedule">
+        <label for="schedule">Meeting Schedule:</label><br><br>
+        <input type="date" id="meeting-date" name="meeting-date" required><br><br>
+        <input type="time" id="meeting-time" name="meeting-time" required><br>
+      </div>
+
+      <br><input type="submit" value="Register">
+    </form>
+
+  </section>
+
+</body>
+
+</html>
+
   </body>
 </html>
