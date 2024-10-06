@@ -22,7 +22,7 @@ const SignUp = ({modify}) => {
 
                     <ProfileEdit displaySubmit={false}/>
 
-                    <button onClick={() => {modify(0)}}>submit</button>
+                    <button onClick={() => {modify(2)}}>submit</button>
                 </div>
 		</div>
 	)

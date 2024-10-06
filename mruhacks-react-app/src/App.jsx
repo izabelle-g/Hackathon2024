@@ -1,10 +1,8 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import Home from './components/Home.jsx'
+import Home from './components/Home.jsx';
 import Login from './components/Login.jsx'
-import './App.css'
-import Login from './components/Login';
-import Home from './components/Home';
+import './App.css';
 import SignUp from './components/SignUp';
 import { useState } from 'react';
 
