@@ -22,7 +22,7 @@ const ProfileEdit = (displaySubmit) => {
             <div id="rangeDisplay">
                 <label htmlFor="partner-formal">Casual</label>
                 <input type="range" id="partner-formal" name="partner-formal" min="0" max="10" required></input>
-                <label for="partner-formal">Unhinged</label>
+                <label htmlFor="partner-formal">Unhinged</label>
             </div>
 
             <h3>Others</h3>

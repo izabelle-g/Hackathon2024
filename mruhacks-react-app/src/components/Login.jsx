@@ -6,7 +6,6 @@ const Login = ({modify}) => {
             <button id='upper' onClick={ () =>{
                 modify(1);
                 // newUser(11);
-                console.log("buruh");
             }}> New user?</button>
             <div id="loginBG">
                 <div><label htmlFor="email">Email</label>
