@@ -22,7 +22,7 @@ const SelectMatch = () => {
 			<div>
 				<button onClick={()=>{
 					alert("Confirmed!");
-				}}> Find Partners</button>
+				}}> Select</button>
 			</div>
 		</div>
 	)
