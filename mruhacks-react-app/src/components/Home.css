@@ -1,3 +1,8 @@
 #mainContainer{
     background-color: white;
+    color: black;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 90vw;
+    height: 90vh;
 }

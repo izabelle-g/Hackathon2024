@@ -1,0 +1,17 @@
+#persona{
+    display: flex;
+    flex-direction: column;
+}
+.largeContainer{
+    display: flex;
+    flex-direction: column;
+}
+textarea{
+    width: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    height: 20vh;
+}
+button:hover{
+    background-color: #FF810A;
+}

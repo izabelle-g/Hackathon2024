@@ -1,15 +1,27 @@
-import Sidebar from './Sidebar'
-import SessionInput from './SessionInput'
-import './Home.css'
+import Sidebar from './Sidebar';
+import SessionInput from './SessionInput';
+import './Home.css';
+import { useState } from 'react';
+import SelectMatch from './SelectMatch';
 
 const Home = () => {
-	return(
-		<div>
-			<h2>Home</h2>
-			<Sidebar></Sidebar>
-			<SessionInput></SessionInput>
-		</div>
-	)
+	let [Match,setMatch] = useState(0);
+	if (Match == 0){
+		return(
+			<div id='mainContainer'>
+				<Sidebar></Sidebar>
+				<SessionInput viewMatches={setMatch}></SessionInput>
+			</div>
+		)
+	}
+	else{
+		return(
+			<div id='mainContainer'>
+				<Sidebar></Sidebar>
+				<SelectMatch/>
+			</div>
+		)
+	}
 };
 
 export default Home

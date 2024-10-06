@@ -22,13 +22,13 @@ const ProfileEdit = (displaySubmit) => {
             <div id="rangeDisplay">
                 <label htmlFor="partner-formal">Casual</label>
                 <input type="range" id="partner-formal" name="partner-formal" min="0" max="10" required></input>
-                <label for="partner-formal">Unhinged</label>
+                <label htmlFor="partner-formal">Unhinged</label>
             </div>
 
             <h3>Others</h3>
             <div>
                 <label htmlFor="others"></label>
-                <textarea id="others" name="others" rows="4" cols="50" placeholder="Any notes htmlFor us?"></textarea>
+                <textarea id="others" name="others" rows="4" cols="50" placeholder="Any notes for us?"></textarea>
             </div>
 
             {/* <h3>Availability</h3> */}
