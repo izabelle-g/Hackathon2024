@@ -17,8 +17,6 @@ async function global(){
         let others = json;
 
         const differences = (me, others) => {
-
-            
             let difflist = [];
             others.forEach(element => {
                 let diffsum = 0;
@@ -28,20 +26,19 @@ async function global(){
                 diffsum += difference * difference;
                 difference = me.friendliness-element.client.friendliness;
                 diffsum += difference * difference;
-                difference = me.extroversion-element.client.extroversion;
-                diffsum += difference * difference;
                 difflist.push(diffsum);
             });
         
             return difflist;
         }
         
-        let difference = differences(me,others);
+        let difference = differences(me[0],others);
         let format = (difference,others) => {
             let array = [];
             let count = 0;
             difference.forEach(score => {
                 array.push([score,others[count].client.name]);
+                count++;
             });
             return array;
         }
@@ -49,8 +46,9 @@ async function global(){
         console.log(formatted);
       } catch (error) {
         console.error(error.message);
-      }
+    }
 }
+global();
 // // Function to calculate cosine similarity between two profiles
 // function cosineSimilarity(profileA, profileB) {
 //     let dotProduct = 0;
