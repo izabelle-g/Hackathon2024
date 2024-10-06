@@ -1,5 +1,7 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
+import Home from './components/Home.jsx'
+import Login from './components/Login.jsx'
 import './App.css'
 import Login from './components/Login';
 import Home from './components/Home';
