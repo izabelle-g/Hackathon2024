@@ -9,7 +9,7 @@ const Login = () => {
 
             <input type="submit">Login</input>
 
-            /**TODO:Signup option link here*/
+            /**TODO:Signup link*/
 		</div>
 	)
 };
