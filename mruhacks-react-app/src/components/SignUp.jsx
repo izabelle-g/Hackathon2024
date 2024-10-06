@@ -1,22 +1,29 @@
-const SignUp = () => {
+import './SignUp.css'
+import ProfileEdit from './ProfileEdit';
+const SignUp = ({modify}) => {
 	return(
-		<div>
+		<div id="signup">
 			<h2>SignUp</h2>
+                <div>
+                    <div>
+                        <label htmlFor="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your name" size="30" required></input>
+                    </div>
+                    <div>
+                        <label htmlFor="pass">Password</label>
+                        <input type="password" name="pass" id="pass" placeholder="Enter your password" size="30" required></input>
+                    </div>
+                    
 
-            <form action="" method="post">
-                <p>
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Enter your name" size="30" required></input>
+                    <div>
+                        <label htmlFor="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email" size="30" required></input>
+                    </div>
 
-                    <label for="pass">Password</label>
-                    <input type="password" name="pass" id="pass" placeholder="Enter your password" size="30" required></input>
+                    <ProfileEdit displaySubmit={false}/>
 
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Enter your email" size="30" required></input>
-
-                    <input type="submit"></input>
-                </p>
-            </form>
+                    <button onClick={() => {modify(0)}}>submit</button>
+                </div>
 		</div>
 	)
 };
