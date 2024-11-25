@@ -1,2 +1,2 @@
-# Hackathon2024
-Creating a solution for the prompt "Boost Productivity" within 24 hours!
+# Duckie Buddy
+A solution to "boosting productivity."  Made for the MRU Hacks Hackathon 2024.
